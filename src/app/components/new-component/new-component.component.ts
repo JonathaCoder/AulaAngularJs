@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './new-component.component.scss'
 })
 export class NewComponentComponent {
- public name = 'jonatha'
+public nomes = {
+  name:'jonatha',
+  age:22,
+  sexo:'masculino'
+}
 }
