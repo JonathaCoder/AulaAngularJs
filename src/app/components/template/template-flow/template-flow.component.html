@@ -21,3 +21,24 @@
  </ul>
 <h2></h2>
 </ng-container> -->
+
+<h1>If,For e seus valores</h1>
+
+@for (item of itens; track item.name;
+let i = $index;
+let c = $count;
+let f = $first;
+let e = $even;
+let o = $odd;
+) {
+  <p>{{item.name}}</p>
+  <p>index : {{i}}</p>
+  <p>count : {{c}}</p>
+  <p>first : {{f}}</p>
+  <p> even: {{e}}</p>
+  <p>odd : {{o}}</p>
+}
+
+<input #name type="text">
+
+<button (click)="addName(name.value)">Add Name</button>
