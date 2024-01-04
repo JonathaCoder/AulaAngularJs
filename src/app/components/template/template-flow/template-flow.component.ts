@@ -12,7 +12,7 @@ import { Observable, ObservableInput, Observer, delay, of } from 'rxjs';
 export class TemplateFlowComponent {
 public isTrue = true
 
-public itens = [{name:'jonatha gagheri ponciano'}];;
+public itens:Array<{name:string}> = [{name:'jonatha'}];;
 
 public Dados:Observable<string[]> = of([
 'maça','cahorro','peru'

@@ -22,7 +22,7 @@
 <h2></h2>
 </ng-container> -->
 
-<h1>If,For e seus valores</h1>
+<!--<h1>If,For e seus valores</h1>
 
 @for (item of itens; track item.name;
 let i = $index;
@@ -42,3 +42,24 @@ let o = $odd;
 <input #name type="text">
 
 <button (click)="addName(name.value)">Add Name</button>
+-->
+
+<!--@empty utilizado para sinalizar caso os dados do back venha vazio-->
+@for (item of itens; track item) {
+  <li>{{item.name}}</li>
+}@empty {
+  <li>Os dados retornados estao vazios</li>
+}
+
+<!--Forma antiga-->
+<ul>
+<ng-container *ngIf="itens.length === 0  else itensExists";>
+nao contem valores
+</ng-container>
+<ng-template #itensExists>
+  <ng-container *ngFor="let item of itens">
+  
+  <li>{{item.name}}</li>
+  </ng-container>
+</ng-template>
+</ul>
