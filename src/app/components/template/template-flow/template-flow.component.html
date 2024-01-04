@@ -1,18 +1,23 @@
 
 <h1>Control Flow</h1>
 <h2>IF Nova</h2>
-@if (Carregar | async; as data) {
+@if (Dados | async; as data) {
   <ul>
     @for (item of data; track item) {
-      <li>{{item}}</li>
+
+     <li>{{item}}</li>
     }
   </ul>
-}@else {
+}
+@else {
   <div [ngClass]="{'loading':true}">
   <h3>Loading</h3>
   </div>
 }
 <!--Forma antiga-->
-<ng-container *ngIf="isTrue">
+<!--<ng-container *ngIf="Dados | async; as data; ">
+ <ul>
+  <ng-container *ngFor="let item of data; trackBy:trackByfn"></ng-container>
+ </ul>
 <h2></h2>
-</ng-container>
+</ng-container> -->

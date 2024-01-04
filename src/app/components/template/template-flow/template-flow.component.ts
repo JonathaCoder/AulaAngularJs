@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Observable, ObservableInput, delay, of } from 'rxjs';
+import { Observable, ObservableInput, Observer, delay, of } from 'rxjs';
 
 @Component({
   selector: 'app-template-flow',
@@ -13,9 +13,7 @@ export class TemplateFlowComponent {
 public isTrue = true
 
 
-public Carregar:Observable<string[]> = of([
-
-'maça','pera','caju','mexirica','melao'
-
-]).pipe(delay(3000));
+public Dados:Observable<string[]> = of([
+'maça','cahorro','peru'
+]).pipe(delay(3000))
 }
