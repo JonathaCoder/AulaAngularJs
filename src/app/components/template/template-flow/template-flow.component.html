@@ -1,13 +1,18 @@
 
 <h1>Control Flow</h1>
 <h2>IF Nova</h2>
-@if (isTrue) {
- <h1>{{name}}, ele esta ativo
-</h1> 
+@if (Carregar | async; as data) {
+  <ul>
+    @for (item of data; track item) {
+      <li>{{item}}</li>
+    }
+  </ul>
+}@else {
+  <div [ngClass]="{'loading':true}">
+  <h3>Loading</h3>
+  </div>
 }
-
 <!--Forma antiga-->
-
 <ng-container *ngIf="isTrue">
-<h2>{{name}}</h2>
+<h2></h2>
 </ng-container>
